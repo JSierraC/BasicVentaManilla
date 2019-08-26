@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="cantidad">Cantidad</string>
+    <string name="app_name">Xierra</string>
+    <string name="cantidad">Cantidad de Manillas</string>
+    <string name="sel1">Seleccione Material</string>
+    <string name="sel2">Seleccione Tipo de Dije</string>
+    <string name="sel3">Seleccione Elemento</string>
+    <string name="btnText">Calcular</string>
+    <string name="errVacio">Ingrese Cantidad Mayor a 0</string>
+    <string name="errMayorCero">Ingrese Cantidad Mayor a O</string>
+    <string name="errSelOpcion">Debe Seleccionar una Opcion</string>
     <string-array name="material">
         <item>Seleccione Material</item>
         <item>Cuero</item>

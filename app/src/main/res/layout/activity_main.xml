@@ -31,7 +31,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Cantidad de Manillas"
+            android:hint="@string/cantidad"
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Seleccione Material" />
+        android:text="@string/sel1" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Seleccione Tipo de Dije" />
+        android:text="@string/sel2" />
 
     <Spinner
         android:id="@+id/spinner2"
@@ -64,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Seleccione Elemento" />
+        android:text="@string/sel3" />
 
     <Spinner
         android:id="@+id/spinner3"
@@ -82,11 +82,12 @@
         android:textAlignment="viewStart" />
 
     <Button
+        android:id="@+id/btnCalcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="calcular"
-        android:text="Calcular" />
+        android:text="@string/btnText" />
 
     <TextView
         android:id="@+id/txtResult"
