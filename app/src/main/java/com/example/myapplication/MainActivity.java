@@ -128,92 +128,95 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Integer valueSpinner1 = Integer.parseInt(String.valueOf(sp1.getSelectedItemId()));
         Integer valueSpinner2 = Integer.parseInt(String.valueOf(sp2.getSelectedItemId()));
         Integer valueSpinner3 = Integer.parseInt(String.valueOf(sp3.getSelectedItemId()));
-        Integer cantidad = Integer.parseInt(String.valueOf(textInputCant.getEditText().getText()));
+        Double cantidad = Double.parseDouble(String.valueOf(textInputCant.getEditText().getText()));
 
-        Integer tasaCambio = 0;
+        Double tasaCambio ;
+        String simbol;
         if(switchtCambio.isChecked()){
-            tasaCambio= 3200;
+            tasaCambio= 1/3200.0;
+            simbol="USD";
         }else{
-            tasaCambio = 1;
+            tasaCambio = 1.0;
+            simbol="PESOS";
         }
 
-        Integer precUnit = 0;
+        Double precUnit = 0.0;
         //cond1
         if(valueSpinner1==1 && valueSpinner2==1 && (valueSpinner3==1 || valueSpinner3==3)){
-            precUnit=100;
+            precUnit=100.0;
         }
 
         //cond2
         if(valueSpinner1==1 && valueSpinner2==1 &&  valueSpinner3==4 ){
-            precUnit=80;
+            precUnit=80.0;
         }
 
         //cond3
         if(valueSpinner1==1 && valueSpinner2==1 && valueSpinner3==5){
-            precUnit=70;
+            precUnit=70.0;
         }
 
         //cond4
         if(valueSpinner1==1 && valueSpinner2==2 && (valueSpinner3==1 || valueSpinner3==3)){
-            precUnit=120;
+            precUnit=120.0;
         }
 
         //cond5
         if(valueSpinner1==1 && valueSpinner2==2 && valueSpinner3==4){
-            precUnit=100;
+            precUnit=100.0;
         }
 
 
         //cond6
         if(valueSpinner1==1 && valueSpinner2==2 && valueSpinner3==5){
-            precUnit=90;
+            precUnit=90.0;
         }
 
 
         //cond7
         if(valueSpinner1==2 && valueSpinner2==1 && (valueSpinner3==1 || valueSpinner3==3)){
-            precUnit=90;
+            precUnit=90.0;
         }
 
 
 
         //cond8
         if(valueSpinner1==2 && valueSpinner2==1 && valueSpinner3==4){
-            precUnit=70;
+            precUnit=70.0;
         }
 
 
         //cond9
         if(valueSpinner1==2 && valueSpinner2==1 && valueSpinner3==5){
-            precUnit=50;
+            precUnit=50.0;
         }
 
 
         //cond10
         if(valueSpinner1==2 && valueSpinner2==2 && (valueSpinner3==1 || valueSpinner3==3)){
-            precUnit=110;
+            precUnit=110.0;
         }
 
         //cond11
         if(valueSpinner1==2 && valueSpinner2==2 && valueSpinner3==4){
-            precUnit=90;
+            precUnit=90.0;
         }
 
         //cond12
         if(valueSpinner1==2 && valueSpinner2==2 && valueSpinner3==5){
-            precUnit=80;
+            precUnit=80.0;
         }
 
-        Integer valor = cantidad*precUnit*tasaCambio;
+        Double valor = cantidad*precUnit*tasaCambio;
 
         NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);
         String currency = format.format(valor);
 
         if(Locale.getDefault().getLanguage()=="es"){
-            txtRes.setText("La(s) "+ cantidad+ " Manillas Tiene un Valor de "+currency);
+            txtRes.setText("La(s) "+ cantidad+ " Manillas Tiene un Valor de "+currency+" "+simbol);
         }
         if(Locale.getDefault().getLanguage()=="en"){
-            txtRes.setText("The "+cantidad+" bracelets are priced at "+currency);
+            txtRes.setText("The "+cantidad+" bracelets are priced at "+currency+" "+simbol);
         }
     }
 
