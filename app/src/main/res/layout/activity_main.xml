@@ -32,7 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Cantidad de Manillas"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColorLink="#009688" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -82,6 +83,7 @@
         android:textAlignment="viewStart" />
 
     <Button
+        android:id="@+id/btnCalcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -91,5 +93,7 @@
     <TextView
         android:id="@+id/txtResult"
         android:layout_width="match_parent"
-        android:layout_height="93dp" />
+        android:layout_height="93dp"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp" />
 </LinearLayout>
